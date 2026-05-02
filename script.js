@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
     image: "/public/project1.jpg",
-    title: "Trainers Logistics",
+    title: "Murang'a Technical Website Redesign",
     description: "Website designed to lighten the load of arranging goods to customers with inbuilt custom quote",
     tools: ["React"],
     liveUrl: "#",
