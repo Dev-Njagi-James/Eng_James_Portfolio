@@ -23,9 +23,15 @@ export default function Home() {
         </nav>
         <nav className="nav-right">
           <ul>
-            <li data-label="GitHub"><i className="fa-brands fa-github"></i></li>
-            <li data-label="Email"><i className="fa-solid fa-envelope"></i></li>
-            <li data-label="Phone"><i className="fa-solid fa-phone"></i></li>
+            <li data-label="GitHub">
+              <a href="https://github.com/Eng-James-Njagi"><i className="fa-brands fa-github"></i></a>
+            </li>
+            <li data-label="Email">
+              <a href="mailto:m89789098@gmail.com"><i className="fa-solid fa-envelope"></i></a>
+            </li>
+            <li data-label="Phone">
+              <a href="tel:+254115 338036"><i className="fa-solid fa-phone"></i></a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -140,7 +146,7 @@ export default function Home() {
           </div>
         </article>
 
-       <Projects id="projects"/>
+        <Projects id="projects" />
       </main>
     </>
   );
