@@ -23,6 +23,9 @@ export default function Home() {
         </nav>
         <nav className="nav-right">
           <ul>
+            <li data-label="CV">
+              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-file-pdf"></i></a>
+            </li>
             <li data-label="GitHub">
               <a href="https://github.com/Eng-James-Njagi"><i className="fa-brands fa-github"></i></a>
             </li>
@@ -59,10 +62,13 @@ export default function Home() {
               designed for growth.
             </div>
 
-            <a href="#projects" className="view-btn">View Projects &rarr;</a>
+            <div className="intro-btns">
+              <a href="#projects" className="view-btn">View Projects &rarr;</a>
+              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="view-btn cv-btn">View CV &rarr;</a>
+            </div>
           </div>
 
-          {/* RIGHT: photo — replace src with your actual image path */}
+          {/* RIGHT: photo */}
           <div className="intro-photo">
             <Image src="/Photo.jpg" alt="James" width={400} height={400} priority loading="eager" />
           </div>
@@ -79,8 +85,7 @@ export default function Home() {
                 I placed 2nd in the Software Development category at the Mt. Kenya West TVET Fair 2025, 
                 competing against institutions across the region. I have participated in national 
                 TVET skills competitions since 2024. I also served as a peer web 
-                development instructor 
-                at Murang&apos;a TTI during my second and third year transition, assisting 
+                development instructor at Murang&apos;a TTI during my second and third year transition, assisting 
                 fellow students with core development skills.
                 I can also work on <strong>frontend development</strong> if the need arises.
               </p>
@@ -88,8 +93,8 @@ export default function Home() {
           </div>
           <p className="about-body">
             As a self-taught developer, I value consistency and continuous
-            learning. I currently serve as an intern at Stravon Tech Labs,
-            contributing to backend systems and projects in the company
+            learning. I currently serve as founder and lead developer at Stravon Tech Labs,
+            building backend systems and client projects.
           </p>
           <p className="about-link">
             Stravon Tech Labs:{" "}
@@ -143,6 +148,7 @@ export default function Home() {
                 <div className="tech-tags">
                   <span className="tag"><i className="fa-solid fa-database"></i> PostgreSQL</span>
                   <span className="tag"><i className="fa-solid fa-database"></i> MySQL</span>
+                  <span className="tag"><i className="fa-solid fa-database"></i> MongoDB</span>
                 </div>
               </div>
             </div>

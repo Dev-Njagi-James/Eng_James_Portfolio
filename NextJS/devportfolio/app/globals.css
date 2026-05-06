@@ -178,6 +178,12 @@ main {
    max-width: 600px;
 }
 
+.intro-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .view-btn {
    display: inline-block;
    background-color: var(--secondaryColor);
