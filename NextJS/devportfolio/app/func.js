@@ -7,54 +7,71 @@ const projects = [
   {
     id: 1,
     image: "/project1.jpg",
-    title: "Murang'a Technical Website Redesign",
-    description: "Website designed to lighten the load of arranging goods to customers with inbuilt custom quote",
-    tools: ["React"],
+    title: "Golden Rentals",
+    description:
+      "Rental marketplace connecting tenants and property listers. Listers can post properties; tenants can browse listings and contact listers directly. Built with Next.js and React, backed by PostgreSQL.",
+    tools: ["Next.js", "React", "PostgreSQL", "CSS"],
     liveUrl: "#",
-    githubUrl: "#",
-    category: "React",
+    githubUrl: "https://github.com/Eng-James-Njagi/Golden-Rentals",
+    category: "Next.js",
   },
   {
     id: 2,
     image: "/project2.jpg",
-    title: "Project Two",
-    description: "Website designed to lighten the load of arranging goods to customers with inbuilt custom quote",
-    tools: ["Vue", "Node"],
+    title: "Stravon Tech Labs — Company Website",
+    description:
+      "Designed and developed the official website for Stravon Tech Labs. Originally built with Node.js, EJS, and CSS, then migrated to Next.js with React for improved performance and maintainability.",
+    tools: ["Next.js", "React", "Node.js", "EJS", "CSS"],
     liveUrl: "#",
-    githubUrl: "#",
-    category: "Vue",
+    githubUrl: "https://github.com/Eng-James-Njagi/Stravon_Tech_Labs",
+    category: "Next.js",
   },
   {
     id: 3,
     image: "/project3.jpg",
-    title: "Project Three",
-    description: "Website designed to lighten the load of arranging goods to customers with inbuilt custom quote",
-    tools: ["JavaScript"],
+    title: "Stravon CMS — Internal Content Management System",
+    description:
+      "Internal CMS built for the Stravon Tech Labs team to generate and distribute social media content. Team members can create, manage, and share content across platforms. Built with Next.js, React, and MongoDB.",
+    tools: ["Next.js", "React", "MongoDB", "JavaScript", "CSS"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/Eng-James-Njagi/Stravon_CMS",
+    category: "Next.js",
+  },
+  {
+    id: 4,
+    image: "/project4.jpg",
+    title: "ROMIS — Repository and Order Management System",
+    description:
+      "Order and inventory management system designed for a school environment. Students can practice real-world workflows, access resource recipes for classes, and generate passive revenue for the institution. Built with Node.js, EJS, and SQL.",
+    tools: ["Node.js", "EJS", "HTML", "CSS", "JavaScript", "SQL"],
     liveUrl: "#",
     githubUrl: "#",
     category: "JavaScript",
   },
   {
-    id: 4,
-    image: "/project4.jpg",
-    title: "Project Four",
-    description: "Another project description goes here for the fourth entry.",
-    tools: ["React", "Firebase"],
-    liveUrl: "#",
-    githubUrl: "#",
-    category: "React",
-  },
-  {
     id: 5,
     image: "/project5.jpg",
-    title: "Project Five",
-    description: "Another project description goes here for the fifth entry.",
-    tools: ["Next.js"],
+    title: "Murang'a TTI — Website Redesign",
+    description:
+      "Full redesign of the Murang'a Technical Training Institute website. Delivered a modern, maintainable platform with an integrated flat-file CMS architecture, session-based authentication, and structured MVC backend.",
+    tools: ["Node.js", "EJS", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://murangatti-website.vercel.app",
+    githubUrl: "https://github.com/Eng-James-Njagi/MurangaTTI-schoolwebsite",
+    category: "JavaScript",
+  },
+  {
+    id: 6,
+    image: "/project6.jpg",
+    title: "GSSSMS — Stock Management System",
+    description:
+      "Stock management system that tracks inventory records and automatically calculates profit, loss, and stock shortages. Built with Next.js and React.",
+    tools: ["Next.js", "React", "JavaScript", "CSS"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Eng-James-Njagi/GSSSMS",
     category: "Next.js",
   },
 ];
+ 
 
 const CARDS_PER_PAGE = 3;
 
