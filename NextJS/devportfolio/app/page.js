@@ -75,11 +75,14 @@ export default function Home() {
               <h2>About Me</h2>
               <span className="about-tag">BackEnd Developer</span>
               <p className="about-intro">
-                I am a backend-focused software developer specializing in API
-                development, database design, authentication, and scalable
-                application logic. I build structured, maintainable systems and
-                can also contribute to <strong>frontend development</strong> when
-                needed to deliver complete products.
+                I am a backend-focused software developer and founder of Stravon Tech Labs. 
+                I placed 2nd in the Software Development category at the Mt. Kenya West TVET Fair 2025, 
+                competing against institutions across the region. I have participated in national 
+                TVET skills competitions since 2024. I also served as a peer web 
+                development instructor 
+                at Murang&apos;a TTI during my second and third year transition, assisting 
+                fellow students with core development skills.
+                I can also work on <strong>frontend development</strong> if the need arises.
               </p>
             </div>
           </div>
