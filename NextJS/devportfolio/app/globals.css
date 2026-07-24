@@ -191,8 +191,8 @@ main {
    font-family: var(--bodyFont);
    font-weight: 700;
    font-size: 0.95rem;
-   padding: 14px 28px;
-   border: none;
+   padding: 12px 26px;
+   border: 2px solid transparent;
    cursor: pointer;
    width: fit-content;
    text-decoration: none;
@@ -452,7 +452,7 @@ main {
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 
@@ -516,6 +516,44 @@ main {
 
 .github-link:hover {
   color: var(--secondaryColor);
+}
+
+/* category chips */
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.chip {
+  background-color: var(--accentColor);
+  border: 1px solid #ccc;
+  font-family: var(--bodyFont);
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.chip:hover {
+  background-color: var(--secondaryColor);
+}
+
+.chip-active {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+  font-weight: 600;
+}
+
+.chip-remove {
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 700;
 }
 
 /* pagination */
@@ -755,6 +793,151 @@ main {
   .project-info p {
     font-size: 0.82rem;
   }
+}
+
+/* ── GITHUB MODAL ── */
+.github-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: var(--secondaryColor);
+  padding: 0;
+}
+
+.github-trigger i {
+  font-size: 1.2rem;
+}
+
+.github-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.github-modal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 400px;
+  position: relative;
+  font-family: var(--bodyFont), sans-serif;
+}
+
+.github-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #8b949e;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  z-index: 1;
+}
+
+.github-modal-close:hover {
+  color: #f0f6fc;
+}
+
+.github-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  border-bottom: 1px solid #21262d;
+}
+
+.github-modal-header i {
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+.github-modal-body {
+  padding: 8px 0;
+}
+
+.github-account-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #f0f6fc;
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.github-account-row:hover {
+  background: #161b22;
+}
+
+.github-account-row.with-divider {
+  border-bottom: 1px solid #21262d;
+}
+
+.github-account-avatar {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.github-account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.github-account-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.github-account-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.github-account-name i {
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.github-account-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #8b949e;
+  padding: 1px 7px;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.github-account-desc {
+  font-size: 0.82rem;
+  color: #8b949e;
+  line-height: 1.4;
 }
 
 /* ── 480px: structural flip ── */

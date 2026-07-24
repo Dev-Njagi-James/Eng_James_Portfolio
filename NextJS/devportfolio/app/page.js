@@ -1,7 +1,25 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Projects from "./func.js";
 
+const GITHUB_ACCOUNTS = [
+  {
+    username: "Dev-Njagi-James",
+    label: "Current",
+    description: "Visit to find the new projects and migrations",
+  },
+  {
+    username: "Eng-James-Njagi",
+    label: "Legacy",
+    description: "Visit to find older projects",
+  },
+];
+
 export default function Home() {
+  const [showGithubModal, setShowGithubModal] = useState(false);
+
   return (
     <>
       <header>
@@ -27,7 +45,9 @@ export default function Home() {
               <a href="/cv.pdf" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-file-pdf"></i></a>
             </li>
             <li data-label="GitHub">
-              <a href="https://github.com/Eng-James-Njagi"><i className="fa-brands fa-github"></i></a>
+              <button className="github-trigger" onClick={() => setShowGithubModal(true)}>
+                <i className="fa-brands fa-github"></i>
+              </button>
             </li>
             <li data-label="Email">
               <a href="mailto:m89789098@gmail.com"><i className="fa-solid fa-envelope"></i></a>
@@ -38,9 +58,51 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+
+      {showGithubModal && (
+        <div className="github-modal-backdrop" onClick={() => setShowGithubModal(false)}>
+          <div className="github-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="github-modal-close" onClick={() => setShowGithubModal(false)}>
+              &times;
+            </button>
+            <div className="github-modal-header">
+              <i className="fa-brands fa-github"></i> GitHub Accounts
+            </div>
+            <div className="github-modal-body">
+              {GITHUB_ACCOUNTS.map((acc, i) => (
+                <a
+                  key={acc.username}
+                  href={`https://github.com/${acc.username}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`github-account-row${i < GITHUB_ACCOUNTS.length - 1 ? " with-divider" : ""}`}
+                >
+                  <Image
+                    src={`https://github.com/${acc.username}.png`}
+                    alt={acc.username}
+                    className="github-account-avatar"
+                    width={48}
+                    height={48}
+                    unoptimized
+                  />
+                  <span className="github-account-info">
+                    <span className="github-account-top">
+                      <span className="github-account-name">
+                        <i className="fa-brands fa-github"></i> {acc.username}
+                      </span>
+                      <span className="github-account-badge">{acc.label}</span>
+                    </span>
+                    <span className="github-account-desc">{acc.description}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <main>
         <article id="home" className="intro">
-          {/* LEFT: text content */}
           <div className="intro-content">
             <div className="title">
               <p>
@@ -51,24 +113,20 @@ export default function Home() {
                 Software Developer: Specialist in BackEnd Development
               </p>
             </div>
-
             <div className="title-body">
               Hello, I am James. I build structured, scalable software systems
               with a focus on clarity, performance, and maintainability. My work
               centers on translating complex requirements into clean architecture
               and reliable products. I approach development as engineering, not
-              decoration — every line of code serves a purpose. I specialize in
+              decoration &mdash; every line of code serves a purpose. I specialize in
               building modern web applications that are efficient, secure, and
               designed for growth.
             </div>
-
             <div className="intro-btns">
               <a href="#projects" className="view-btn">View Projects &rarr;</a>
               <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="view-btn cv-btn">View CV &rarr;</a>
             </div>
           </div>
-
-          {/* RIGHT: photo */}
           <div className="intro-photo">
             <Image src="/Photo.jpg" alt="James" width={400} height={400} priority loading="eager" />
           </div>
@@ -85,7 +143,7 @@ export default function Home() {
                 I placed 2nd in the Software Development category at the Mt. Kenya West TVET Fair 2025, 
                 competing against institutions across the region. I have participated in national 
                 TVET skills competitions since 2024. I also served as a peer web 
-                development instructor at Murang&apos;a TTI during my second and third year transition, assisting 
+                development instructor at Murang&#39;a TTI during my second and third year transition, assisting
                 fellow students with core development skills.
                 I can also work on <strong>frontend development</strong> if the need arises.
               </p>
@@ -107,15 +165,14 @@ export default function Home() {
           <div className="skills-body">
             <div className="skills-competencies">
               <ul className="competency-list">
-                <li>API design &amp; architecture</li>
-                <li>Database design &amp; normalization</li>
-                <li>Authentication &amp; security implementation</li>
-                <li>Frontend implementation &amp; component design</li>
+                <li>API design & architecture</li>
+                <li>Database design & normalization</li>
+                <li>Authentication & security implementation</li>
+                <li>Frontend implementation & component design</li>
                 <li>REST API integrations including payment systems</li>
-                <li>Version control &amp; deployment workflows</li>
+                <li>Version control & deployment workflows</li>
               </ul>
             </div>
-
             <div className="skills-tech">
               <div className="tech-row">
                 <span className="tech-label">Languages</span>
